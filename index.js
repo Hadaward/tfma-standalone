@@ -12,15 +12,13 @@ standalone.window = () => {
 		width: 1240,
 		height: 660,
 		webPreferences: {
-			contextIsolation: true,
-			devTools: false
-		},
-		icon: "souris.ico"
+			contextIsolation: true
+		}
 	});
 	
-	try{
+	try {
 		http.createServer();
-	} catch (e) {};
+	} catch(e) {};
 	
 	window.webContents.setVisualZoomLevelLimits(1, 5);
 	window.loadURL("http://127.0.0.1:1024", {userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36"});
