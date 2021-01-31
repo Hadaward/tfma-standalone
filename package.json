@@ -9,11 +9,11 @@
     "postinstall": "install-app-deps",
     "start": "electron .",
     "pack": "build --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder --x64"
   },
   "build": {
     "asar": false,
-    "appId": "com.hadaward.flash_loader",
+    "appId": "com.hadaward.tfmadv_standalone",
     "linux": {
       "target": [
         "AppImage",
@@ -25,8 +25,7 @@
         {
           "target": "NSIS",
           "arch": [
-            "ia32",
-			"x64"
+            "x64"
           ]
         }
       ],
