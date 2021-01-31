@@ -1,0 +1,43 @@
+{
+  "name": "TransformiceAdventures",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "A ElectronJS StandAlone for Transformice Adventures",
+  "author": "Hadawardgz",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "asar": false,
+    "appId": "com.hadaward.flash_loader",
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": [
+        {
+          "target": "NSIS",
+          "arch": [
+            "ia32",
+			"x64"
+          ]
+        }
+      ],
+      "icon": "souris.ico"
+    }
+  },
+  "dependencies": {
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "electron": "^11.2.1",
+    "electron-builder": "^22.9.1"
+  }
+}
