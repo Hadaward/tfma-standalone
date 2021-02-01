@@ -1,9 +1,10 @@
 const {Menu}=require('electron');
 
 module.exports = class {
-	constructor() {
+	constructor(win) {
 		this.data = {};
 		this.menu = null;
+		this.window = win;
 	}
 	
 	createMenu(id, label) {
@@ -68,7 +69,7 @@ module.exports = class {
 	}
 	
 	update() {
-		Menu.setApplicationMenu(this.menu);
+		this.window.setMenu(this.menu);
 		return this;
 	}
 }
