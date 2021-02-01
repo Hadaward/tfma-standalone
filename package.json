@@ -1,6 +1,6 @@
 {
   "name": "TransformiceAdventures",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "A ElectronJS StandAlone for Transformice Adventures",
   "author": "Hadawardgz",
@@ -9,7 +9,7 @@
     "postinstall": "install-app-deps",
     "start": "electron .",
     "pack": "build --dir",
-    "dist": "electron-builder --x64"
+    "dist": "electron-builder --ia32"
   },
   "build": {
     "asar": false,
@@ -25,7 +25,7 @@
         {
           "target": "NSIS",
           "arch": [
-            "x64"
+            "ia32"
           ]
         }
       ],
@@ -33,6 +33,7 @@
     }
   },
   "dependencies": {
+    "portscanner": "^2.2.0",
     "request": "^2.88.2"
   },
   "devDependencies": {
