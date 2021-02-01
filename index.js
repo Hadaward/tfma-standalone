@@ -20,7 +20,7 @@ standalone.window=()=>{
 	window.webContents.setVisualZoomLevelLimits(1, 5);
 	window.webContents.setZoomFactor(window.webContents.getZoomFactor());
 	
-	standalone.menu=(new Menu)
+	standalone.menu=new Menu(window)
 	.createMenu(1, "Game")
 	.createSubMenu(1, {
 		id: 1,
