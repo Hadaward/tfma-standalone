@@ -3,6 +3,14 @@ Transformice Adventures Standalone (TAS) is a program developed in NodeJS in sup
 
 # Changelog
 
-- I decided to polish some of the dirt, the Standalone code was redesigned to better meet my needs without compromising its performance.
-- New options have been introduced to the Standalone menu, you may like to welcome **Cache** and **Debug** which allow you to clear the Standalone cache and enter Debug Mode allowing you to use unreleased features such as the reaction roulette (press F to open).
-- Now to make sure your game is loading whenever the game starts to load any file, a loading message should appear in the menu, if it's taking too long to open the game after loading the files press CTRL + R and your game will be reloaded properly .
+- The code has been refined and improved again. Now being able to properly check the open ports and limit the amount of windows that can be opened.
+- The program will not be able to run in more than 5 windows, if a sixth window is opened a message will appear warning you about it.
+- The view and debug settings are appropriately saved.
+- Now ProtoM801.js is no longer a local file, it will be loaded from the game's official website and modified before being sent to Standalone, so there is no need to worry when the game is updated as the Standalone will work.
+
+# Compatibility
+The program is compatible with Linux and Mac but does not have an installer available, if anyone wants to create feel free to do so.
+For windows there is an executable installer available for the x32 and x64 platforms.
+
+# Note
+The reason for the ressources folder to continue to exist is because when uploading some graphic resources of the game through the official website it was not correctly received and caused visual bugs, however there is no need to worry if something new is implemented in the game and needs new files because if the file does not exist in the ressources folder it will continue to load from the site.
