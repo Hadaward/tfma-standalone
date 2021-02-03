@@ -1,35 +1,35 @@
 {
   "name": "TransformiceAdventures",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
-  "description": "A ElectronJS StandAlone for Transformice Adventures",
-  "author": "Hadawardgz",
-  "main": "index.js",
+  "description": "An unofficial standalone developed in NodeJS for the game Transformice Adventures.",
+  "author": {
+    "name": "Hadawardgz",
+    "email": "eduardo.gimenez07@gmail.com"
+  },
+  "homepage": "https://github.com/Hadaward/tfma-standalone",
+  "main": "application.js",
   "scripts": {
     "postinstall": "install-app-deps",
     "start": "electron .",
     "pack": "build --dir",
-    "dist": "electron-builder --ia32"
+    "dist-win64": "electron-builder --win --x64",
+    "dist-win32": "electron-builder --win --ia32",
+    "dist-linux64": "electron-builder --linux --x64",
+    "dist-linux32": "electron-builder --linux --ia32"
   },
   "build": {
     "asar": false,
     "appId": "com.hadaward.tfmadv_standalone",
     "linux": {
       "target": [
-        "AppImage",
         "deb"
-      ]
+      ],
+	  "icon": "ressources/souris.png"
     },
     "win": {
-      "target": [
-        {
-          "target": "NSIS",
-          "arch": [
-            "ia32"
-          ]
-        }
-      ],
-      "icon": "souris.ico"
+      "target": "NSIS",
+      "icon": "ressources/souris.ico"
     }
   },
   "dependencies": {
