@@ -1,5 +1,5 @@
 # Transformice Adventures Standalone
-Transformice Adventures Standalone (TAS) is a program developed in NodeJS in support of the ElectronJS and Request libraries. It allows you to play on the desktop and also temporarily fixes the current problem with the game chat not working.
+Transformice Adventures Standalone is an unofficial standalone developed in Electron with the aim of allowing the game to be easily opened. TAS contain extra features such as fixing the game chat bug and Debug mode that allows access to resources still in the experimental stage.
 
 # Changelog
 
